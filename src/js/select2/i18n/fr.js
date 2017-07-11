@@ -2,12 +2,12 @@ define(function () {
   // French
   return {
     errorLoading: function () {
-      return 'Les résultats ne peuvent pas être chargés.';
+      return 'Les résultats n\'ont pas pu être chargés';
     },
     inputTooLong: function (args) {
       var overChars = args.input.length - args.maximum;
 
-      var message = 'Supprimez ' + overChars + ' caractère';
+      var message = 'Veuillez supprimez ' + overChars + ' caractère';
 
       if (overChars !== 1) {
         message += 's';
@@ -18,7 +18,7 @@ define(function () {
     inputTooShort: function (args) {
       var remainingChars = args.minimum - args.input.length;
 
-      var message = 'Saisissez ' + remainingChars + ' caractère';
+      var message = 'Veuillez entrer ' + remainingChars + ' ou plusieurs caractère';
 
       if (remainingChars !== 1) {
         message += 's';
@@ -30,7 +30,7 @@ define(function () {
       return 'Chargement de résultats supplémentaires…';
     },
     maximumSelected: function (args) {
-      var message = 'Vous pouvez seulement sélectionner ' +
+      var message = 'Vous ne pouvez sélectionner que ' +
         args.maximum + ' élément';
 
       if (args.maximum !== 1) {
